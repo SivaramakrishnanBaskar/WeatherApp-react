@@ -1,0 +1,166 @@
+/* App Container */
+.weather-app {
+    font-family: 'Poppins', Verdana, Geneva, Tahoma, sans-serif; /* Use Poppins as the primary font */
+    text-align: center;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    max-width: 400px;
+    margin: 0 auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: background-color 0.5s ease-in-out;
+  }
+  
+  /* Sunny weather styles */
+  .weather-sunny {
+    background-color: #FFD700; /* Sunny yellow background */
+  }
+  
+  /* Rainy weather styles */
+  .weather-rainy {
+    background-color: #87CEEB; /* Sky blue background */
+  }
+  
+  /* Your other CSS styles */
+  
+  /* Title */
+  .weather-app h1 {
+    font-size: 24px;
+    color: #333;
+  }
+  
+  /* Search Form */
+  .weather-app form {
+    margin-top: 20px;
+    margin-bottom: 20px; /* Add margin at the bottom for double line space */
+    display: flex;
+    justify-content: center;
+  }
+  
+  .weather-app input[type="text"] {
+    padding: 10px;
+    font-size: 16px;
+    width: 70%;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  /* Button Style */
+  .weather-app button {
+    padding: 10px 15px;
+    font-size: 16px;
+    background-color: #4caf50; /* Green */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 10px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .weather-app button:hover {
+    background-color: #45a049; /* Darker green on hover */
+  }
+  
+  /* Weather Info */
+  .weather-info {
+    margin-top: 20px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  .weather-info h2 {
+    font-size: 24px;
+    color: #333;
+  }
+  
+  .weather-info img {
+    width: 60px;
+    height: 60px;
+  }
+  
+  .weather-info .details {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .weather-info .details div {
+    margin: 10px 0;
+    font-size: 18px;
+    color: #333;
+  }
+  
+  .weather-info .details .temperature {
+    font-size: 24px;
+  }
+  
+  /* Footer */
+  .weather-app footer {
+    margin-top: 20px;
+    font-size: 14px;
+    color: #777;
+  }
+  
+  .weather-app footer a {
+    color: #007bff;
+    text-decoration: none;
+  }
+  
+  .weather-app footer a:hover {
+    text-decoration: underline;
+  }
+  /* WeatherApp.css */
+  
+  /* Default background styles */
+  .weather-app {
+    background-color: #f0f0f0; /* Default background color */
+    transition: background-color 0.5s; /* Smooth transition effect */
+  }
+  
+  /* Define background styles for different weather conditions */
+  .weather-sunny {
+    background-image: url('data:image/jpeg;base64,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'); /* Replace with your sunny background image */
+    background-size: cover;
+    background-position: center;
+    background-color: rgba(255, 255, 255, 0.5); /* Add a semi-transparent overlay for better readability */
+  }
+  
+  .weather-rainy {
+    background-image: url('https://media.istockphoto.com/id/835220312/video/drops-of-water-fall-into-a-lake-macro-and-slow-motion.jpg?s=640x640&k=20&c=wXn8yfSQylVs1yVaryXQFaiA5zDnkB0QlLVMzvLs-0g='); /* Replace with your rainy background image */
+    background-size: cover;
+    background-position: center;
+    background-color: rgba(0, 0, 0, 0.5); /* Add a semi-transparent overlay for better readability */
+  }
+  
+  /* Add more condition-specific styles as needed */
+  
+  /* Other CSS styles for your WeatherApp component */
+  /* ... */
+  /* Set the background color of the entire webpage to gold */
+  
+  @keyframes shake {
+    0% { transform: translateX(0); }
+    25% { transform: translateX(5px); }
+    50% { transform: translateX(-5px); }
+    75% { transform: translateX(5px); }
+    100% { transform: translateX(0); }
+  }
+  
+  body {
+    background: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQraxlme6XrfLBgKE3xQUwgOpOxpmMNO9J2KA&usqp=CAU') fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+  }
+  
+  .background-image-shake {
+    animation: shake 5s ease infinite;
+  }
+  
+  
